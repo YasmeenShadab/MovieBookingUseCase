@@ -1,0 +1,22 @@
+<mat-card>
+  <h1 mat-dialog-title>Update Movie</h1>
+  <div mat-dialog-content>
+    <form [formGroup]="updateForm">
+      <mat-form-field>
+        <input matInput placeholder="MovieName" formControlName="movieName" required>
+      </mat-form-field>
+      <div *ngIf="errorMessage" class="error-message">
+        {{errorMessage}}
+      </div>
+      <div *ngIf="sucessMessage" class="sucess-message">
+        {{sucessMessage}}
+      </div>
+      <div mat-dialog-actions>
+        <button mat-button mat-raised-button class="button" color="primary" (click)="onSubmit()">Update</button>
+        <button mat-button mat-raised-button class="button" color="primary" (click)="onClose()">Close</button>
+
+      </div>
+    </form>
+  </div>
+
+</mat-card>

@@ -1,0 +1,134 @@
+
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color:black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.header-buttons{
+    display: flex;
+    gap: 10px;
+    justify-self: end;
+}
+
+.header-buttons .btn{
+    padding: 10px 20px;
+    background-color: white;
+    font-weight: bold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    border-radius: 4px;
+}
+input{
+    gap: 10px;
+    padding: 20px;
+    padding: 10px 20px;
+    background-color:white;
+    font-weight: bold;
+    color:black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.header-buttons .btn:hover{
+    background-color: #0056b3;
+}
+.header-text{
+    font-size: 24px;
+}
+
+.movie-grid-container{
+    background-color: black;
+    display: grid;
+    gap: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    box-sizing:content-box;
+    padding: 0;
+}
+.movie-grid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.movie-cell{
+    background-image: url('https://img.freepik.com/premium-photo/black-clapper-board-movie-slate-popcorn-black-background_335640-4398.jpg');
+    background-repeat: no-repeat; 
+    background-position: right;
+    background-size: cover;
+    display: flex;
+    color: white;
+    align-items: center;
+    border: 1px solid black;
+    margin: 16px;
+    font-size: larger;
+    font-style: italic;
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-cell:hover{
+    transform: translateX(-5px);
+    box-shadow: 2px 4px 8px white;;
+}
+
+.movie-image img{
+    max-width:200px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.movie-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    width: calc(100%-400px);
+}
+ 
+.movie-details {
+    margin-top: 20px;
+  }
+
+  /* .search-group {
+    margin-bottom: 15px; 
+  }
+   */
+  .form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  
+  .form-control {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+  }
+  
+  
+

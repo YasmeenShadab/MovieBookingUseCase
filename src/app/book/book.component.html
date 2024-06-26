@@ -1,0 +1,48 @@
+<div class="home-container">
+    <div class="header-text">WELCOME TO USER</div>
+    <div class="header-buttons">
+        <div class="search-group">
+            <form [formGroup]="getForm">
+                <div class="form-group">
+                    <input placeholder="Enter Movie Name" formControlName="movieName">
+                    <button class="btn" (click)="onSubmit()">Submit</button>
+                </div>
+            </form>
+        </div>
+        <button class="btn" (click)="openDialog()">Book</button>
+        <button class="btn" (click)="getMovie()">Get All Movies</button>
+    </div>
+</div>
+<div class="movie-grid-container" *ngIf="showMovies">
+    <div class="movie-grid">
+        <div *ngFor="let movie of movies" class="movie-cell">
+            <div class="movie-image">
+                <img [src]="getMovieImage(movie.movieName)">
+            </div>
+            <div class="movie-info">
+                <p><strong>Movie:</strong>{{movie.movieName}}</p>
+                <p><strong>Theater:</strong>{{movie.theatre}}</p>
+                <p><strong>Total Tickets:</strong>{{movie.totalTickets}}</p>
+                <p><strong>Status:</strong>{{movie.status}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="movie-grid-container" *ngIf="fetched">
+    <div class="movie-grid">
+        <div class="movie-cell">
+            <div class="movie-image">
+                <img [src]="getMovieImage(fetchedMovie[0].movieName)">
+            </div>
+            <div *ngFor="let item of fetchedMovie " class="movie-info">
+                <p><strong>Movie:</strong>{{item.movieName}}</p>
+                <p><strong>Theater:</strong>{{item.theatre}}</p>
+                <p><strong>Total Tickets:</strong>{{item.totalTickets}}</p>
+                <p><strong>Status:</strong>{{item.status}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

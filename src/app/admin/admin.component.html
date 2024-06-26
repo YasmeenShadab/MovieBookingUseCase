@@ -1,0 +1,50 @@
+<div class="home-container">
+    <div class="header-text">WELCOME TO ADMIN</div>
+    <div class="header-buttons">
+        <div class="search-group">
+            <form [formGroup]="getForm">
+                <div class="form-group">
+                    <input placeholder="Enter Movie Name" formControlName="movieName">
+                    <button class="btn" (click)="onSubmit()">Submit</button>
+                </div>
+            </form>
+        </div>
+        <button class="btn" (click)="getMovie()">Get All Movies</button>
+        <button class="btn" (click)="openDialog()">Add</button>
+        <button class="btn" (click)="openDialogUpdate()">Update</button>
+        <button class="btn" (click)="openDialogDelete()">Delete</button>
+    </div>
+</div>
+<div class="movie-grid-container" *ngIf="showMovies">
+    <div class="movie-grid">
+        <div *ngFor="let movie of movies" class="movie-cell">
+            <div class="movie-image">
+                <img [src]="getMovieImage(movie.movieName)">
+            </div>
+            <div class="movie-info">
+                <p><strong>Movie:</strong>{{movie.movieName}}</p>
+                <p><strong>Theater:</strong>{{movie.theatre}}</p>
+                <p><strong>Total Tickets:</strong>{{movie.totalTickets}}</p>
+                <p><strong>Status:</strong>{{movie.status}}</p>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div class="movie-grid-container" *ngIf="fetched">
+    <div class="movie-grid">
+        <div class="movie-cell">
+            <div class="movie-image">
+                <img [src]="getMovieImage(fetchedMovie[0].movieName)">
+            </div>
+            <div class="movie-info">
+                <p><strong>Movie:</strong>{{fetchedMovie[0].movieName}}</p>
+                <p><strong>Theater:</strong>{{fetchedMovie[0].theatre}}</p>
+                <p><strong>Total Tickets:</strong>{{fetchedMovie[0].totalTickets}}</p>
+                <p><strong>Status:</strong>{{fetchedMovie[0].status}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

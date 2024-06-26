@@ -1,0 +1,42 @@
+mat-form-field{
+    width: 100%;
+    margin-bottom:20px;
+    /* margin-right: 20px; */
+}
+mat-card{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    margin:auto;
+    overflow: hidden;
+}
+
+button{
+    width: 40%;
+    margin-top: 20px;
+    margin: 20px;
+    color: white ;
+    background-color: rgba(0, 102, 255, 0.938);
+}
+
+mat-dialog-actions{
+    text-align: center;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.error-message{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sucess-message{
+    color:green;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

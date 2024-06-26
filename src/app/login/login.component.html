@@ -1,0 +1,37 @@
+<mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+        <form>
+            <mat-form-field appearance="fill">
+                <mat-label>Login Id</mat-label>
+                <input matInput [(ngModel)]="loginData.loginId" placeholder=" Enter Your Login Id" required
+                    name="loginId" [readonly]="data.isAdmin==='admin'">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput [(ngModel)]="loginData.password" type="password" placeholder=" Enter Your Password"
+                    required name="password">
+            </mat-form-field>
+            <div>
+                <div *ngIf="data.isAdmin!='admin'" class="actions">
+                    <span class="forget-Password" (click)="openForgetPasswordDialod()">Forget Password?</span>
+                    <span class="register" (click)="openRegistrationDialog()">New user? Register here</span>
+                </div>
+            </div>
+
+
+            <div *ngIf="errorMessage" class="error-message">
+                {{errorMessage}}
+            </div>
+            <div *ngIf="sucessMessage" class="sucess-message">
+                {{sucessMessage}}
+            </div>
+
+            <div class="button-container">
+                <button *ngIf="data.isAdmin=='user'" mat-raised-button color="primary" (click)="onLogin('user')">Login</button>
+                <button *ngIf="data.isAdmin=='admin'" mat-raised-button color="primary" (click)="onLogin('admin')">Login</button>
+                <button mat-raised-button class="button" color="primary" (click)="onClose()">Close</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

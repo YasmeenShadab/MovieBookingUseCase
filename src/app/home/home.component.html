@@ -1,0 +1,13 @@
+<div class="home-container">
+    <div class="header-text">WELCOME TO BOOK YOUR SHOW</div>
+    <div class="header-buttons">
+        <button class="btn" (click)="openLoginDialog('user') ">Login/SignUp</button>
+        <button class="btn" (click)="openLoginDialog('admin') ">Admin Login</button>
+    </div>
+</div>
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let image of images">
+        <img [src]=image alt="Image" (click)="openLoginDialog('user')">
+    </div>
+</div>
+<div class="background-image"></div>

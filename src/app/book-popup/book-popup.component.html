@@ -1,0 +1,31 @@
+<mat-card>
+<h1 mat-dialog-title>Book Tickets</h1>
+<div mat-dialog-content>
+  <form [formGroup]="bookForm">
+    <mat-form-field>
+      <input matInput placeholder="UserName" formControlName="userName" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="MovieName" formControlName="movieName" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Theater" formControlName="theater" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Number of Tickets" type="number" formControlName="numberOfTicketsBooked" required>
+    </mat-form-field>
+    <div *ngIf="errorMessage" class="error-message">
+      {{errorMessage}}
+    </div>
+    <div *ngIf="sucessMessage" class="sucess-message">
+      {{sucessMessage}}
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button mat-raised-button class="button" color="primary" (click)="onSubmit()">Submit</button>
+      <button mat-button mat-raised-button class="button" color="primary" (click)="onClose()">Close</button>
+    
+    </div>
+  </form>
+</div>
+
+</mat-card>

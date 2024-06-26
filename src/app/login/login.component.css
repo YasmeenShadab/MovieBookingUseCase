@@ -1,0 +1,55 @@
+mat-card{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    margin:auto;
+    overflow: hidden;
+}
+
+mat-form-field{
+    width: 100%;
+    margin-bottom:20px;
+    /* margin-right: 20px; */
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.forget-Password,
+.register{
+    /* display:block;
+    margin-top:10px;
+    text-align: right; */
+    color:#007bff;
+    cursor:pointer;
+    text-decoration: none;
+}
+
+.forget-Password:hover,
+.register:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 40%;
+    margin-top: 20px;
+    margin: 20px;
+}
+
+
+.error-message{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sucess-message{
+    color:green;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.button-container{
+    text-align: center;
+}
